@@ -3,10 +3,9 @@
     <img :src="bgimgSource" alt="Background Image" class="absolute inset-0 object-cover h-full w-full z-0" />
     <div class="absolute inset-0 flex flex-col justify-center items-center pt-6 ">
       <div class=" z-10 mx-5 max-w-full max-h-full overflow-auto">
-        <img ref="imageRef" :src="imageUrl" alt="" class="max-h-full w-auto mx-auto">
+        <img ref="imageRef" :src="imageUrl" alt="" class="max-h-full w-full">
 
-        <!-- <div class="mt-8  inline-block py-2 px-4 border-2 border-black rounded-full">长按图片即可保存</div> -->
-        <div class="mt-8 save-image inline-block py-2 px-4 border border-black rounded-full text-gray-800">长按图片即可保存</div>
+        <div class="mt-8  h-10 save-image inline-block py-2 px-4 border border-black rounded-full text-gray-800">长按图片即可保存</div>
 
       </div>
     </div>
@@ -31,3 +30,11 @@ const imageUrl = computed(() => {
 });
 
 </script>
+
+<style>
+.save-image {
+  font-size: 16px; /* 设置字体大小为20像素 */
+  min-width: 200px; /* 设置按钮的最小宽度 */
+  white-space: nowrap; /* 防止文本换行 */
+}
+</style>
