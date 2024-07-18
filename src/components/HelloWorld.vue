@@ -1,18 +1,12 @@
 <template>
   <div class="relative h-screen w-screen overflow-auto">
-    <img :src="bgimgSource" class="w-screen h-svh fixed inset-0" />
-
-    <img
-      :src="bgimgSource"
-      alt="Background Image"
-      class="absolute inset-0 object-cover h-full w-full z-0"
-    />
+    <img :src="bgimgSource" class="w-screen" />
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import bgimgSource from "@assets/bg.png";
+import bgimgSource from "@assets/xiongjian.jpg";
 
 defineProps({
   msg: String,
